@@ -5,8 +5,10 @@ import { FiBell, FiShoppingCart } from 'react-icons/fi'
 import logo from '../assets/logo_large.png'
 import disney from '../assets/disney.webp'
 import { navbarMiddle } from '../constants'
+import { useNavigate, Link } from 'react-router-dom'
 
 const Nav = ({ searchProducts }) => {
+  const navigate = useNavigate()
 
   const [state, setState] = useState("")
 
@@ -14,18 +16,24 @@ const Nav = ({ searchProducts }) => {
     setState(e.target.value)
   }
 
-  async function handleSubmit (e) {
+  function handleSubmit (e) {
     e.preventDefault()
-    await searchProducts(state)
+    navigate(`/items/?search=${state}`)
+  }
+
+  function cleanLogo () {
+    setState("")
   }
 
   return (
     <header className='flex flex-col items-center justify-center bg-[#FFF159]'>
       <nav className='flex justify-between items-center w-full p-2 gap-16 max-w-[1200px]'>
-        <img className='max-h-[34px] max-w-[134px] object-contain' src={logo} alt='MercadoLibre Logo' />
+        <Link to='/'>
+          <img onClick={cleanLogo} className='max-h-[34px] max-w-[134px] object-contain' src={logo} alt='MercadoLibre Logo' />
+        </Link>
         <form className='flex flex-1 justify-between max-w-[600px] bg-white h-fit rounded-sm shadow-md p-1 gap-2' onSubmit={handleSubmit}>
           <input className='flex-1 bg-transparent p-1' type='text' name='query' id='query' placeholder='Buscar productos, marcas y más...' onChange={handleChange} value={state} />
-          <button><BsSearch /></button>
+          <button type='submit'><BsSearch /></button>
         </form>
         <img className='max-h-[39px] object-contain' src={disney} alt='MercadoLibre Logo' />
       </nav>
