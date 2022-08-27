@@ -30,3 +30,8 @@ body {
 a:hover {
   color: inherit;
 }
+
+#violet {
+  background: rgb(170, 23, 144);
+  background: linear-gradient(90deg, rgba(170, 23, 144, 1) 0%, rgba(170, 23, 144, 1) 35%, rgba(18, 25, 83, 1) 100%);
+}

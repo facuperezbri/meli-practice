@@ -7,7 +7,7 @@ import more from '../assets/home-carrousel-logos/view-more.svg'
 
 const HomePayments = () => {
   return (
-    <div className='flex justify-between items-center m-auto bg-white w-[1200px] rounded-md px-[15px] py-[20px] shadow-sm'>
+    <div className='flex justify-between items-center bg-white w-[1200px] rounded-md px-[15px] py-[20px] shadow-sm'>
       <div className='flex gap-3'>
         <img src={creditCard} alt='Credit card' />
         <div>
