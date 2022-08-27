@@ -100,11 +100,11 @@ const SellerInfo = ({ seller, detail }) => {
           </div>
           <div className='flex flex-col items-center justify-center gap-2'>
             <img className='w-[28px]' src={message_positive} alt="Messages" />
-            <p className='text-[12px] font-light'>Brinda buena atención</p>
+            <p className='text-[12px] font-light w-[70%]'>Brinda buena atención</p>
           </div>
           <div className='flex flex-col items-center justify-center gap-2'>
             <img className='w-[28px]' src={time_positive} alt="Time" />
-            <p className='text-[12px] font-light'>Despacha sus productos a tiempo</p>
+            <p className='text-[12px] font-light w-[70%]'>Despacha sus productos a tiempo</p>
           </div>
         </div>
       </div >

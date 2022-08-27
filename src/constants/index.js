@@ -6,5 +6,4 @@ export const navbarMiddle = [
   { title: 'Moda' },
   { title: 'Vender' },
   { title: 'Ayuda' },
-
 ]

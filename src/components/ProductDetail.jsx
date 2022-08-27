@@ -8,9 +8,8 @@ const ProductDetail = ({ detail, seller, image, imageSetter }) => {
 
   return (
 
-    <section>
+    <section className='border-b-[#EBEBEB] border-b-[1px] mb-8'>
       <div className='flex justify-between w-full'>
-        {console.log(detail)}
 
         {/* Imagenes */}
         <div className='flex'>

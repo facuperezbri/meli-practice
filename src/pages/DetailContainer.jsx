@@ -54,7 +54,7 @@ const DetailContainer = () => {
       <div className='flex flex-col'>
         <ProductDetail detail={detail} image={image} imageSetter={imageSetter} />
         <Description description={description} />
-        <Questions />
+        <Questions seller={seller} detail={detail} />
       </div>
       <SellerInfo seller={seller} detail={detail} />
     </div>
