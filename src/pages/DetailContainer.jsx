@@ -3,6 +3,9 @@ import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import ProductDetail from '../components/ProductDetail'
 import Questions from '../components/Questions'
+import Description from '../components/Description'
+import loading from '../assets/loading.gif'
+import SellerInfo from '../components/SellerInfo'
 
 const DetailContainer = () => {
   const params = useParams()
@@ -19,7 +22,6 @@ const DetailContainer = () => {
 
   useEffect(() => {
     searchDetail(params.id).then(r => {
-      console.log(r);
       setImage(r.pictures[0].url);
       document.title = r.title
       axios.get(`https://api.mercadolibre.com/items/${r.id}/description`).then(r => {
@@ -39,10 +41,22 @@ const DetailContainer = () => {
     setImage(e.target.src)
   }
 
+  if (!detail) {
+    return (
+      <div className='flex justify-center items-center w-full h-full '>
+        <img src={loading} alt='loading' />
+      </div>
+    )
+  }
+
   return (
-    <div className='flex flex-col justify-center items-center m-auto bg-white w-[1200px] rounded-sm shadow-sm mt-10 p-3'>
-      <ProductDetail detail={detail} seller={seller} description={description} image={image} imageSetter={imageSetter} />
-      <Questions />
+    <div className='flex justify-between m-auto bg-white w-[1200px] rounded-sm shadow-sm mt-10 p-4'>
+      <div className='flex flex-col'>
+        <ProductDetail detail={detail} image={image} imageSetter={imageSetter} />
+        <Description description={description} />
+        <Questions />
+      </div>
+      <SellerInfo seller={seller} detail={detail} />
     </div>
   )
 }
