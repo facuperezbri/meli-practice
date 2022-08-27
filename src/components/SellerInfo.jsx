@@ -22,7 +22,7 @@ const SellerInfo = ({ seller, detail }) => {
   return (
     <div className='flex flex-col gap-6'>
 
-      <div className='flex flex-col gap-6 border-solid border-[1px] border-gray-200 px-5 py-7 rounded-md w-[310px]' >
+      <div className='flex flex-col gap-6 border-solid border-[1px] px-3 py-4 border-gray-200 rounded-md w-[310px]' >
         {/* Datos llegada producto */}
         <div className='flex items-start text-[#00A650]'>
           <BsTruck size={20} />
@@ -46,8 +46,8 @@ const SellerInfo = ({ seller, detail }) => {
         </div>
 
         {/* Botones */}
-        <div className='flex flex-col gap-2'>
-          <button className='w-[275px] h-[48px] bg-[#3483FA] text-white rounded-md font-bold text-[16px] hover:bg-[#245db3] duration-500'>Comprar ahora</button>
+        <div className='flex flex-col items-center justify-center gap-2'>
+          <button className='w-[275px] h-[48px] bg-[#3483FA] text-white rounded-md font-bold text-[16px] hover:bg-[#245db3] duration-500 p-0 m-0'>Comprar ahora</button>
           <button className='w-[275px] h-[48px] bg-[#D9E7FA] text-[#3483FA] rounded-md font-bold text-[16px] hover:bg-[#cad8ea] duration-500'>Agregar al carrito</button>
         </div>
 

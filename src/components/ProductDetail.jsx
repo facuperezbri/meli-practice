@@ -8,7 +8,7 @@ const ProductDetail = ({ detail, seller, image, imageSetter }) => {
 
   return (
 
-    <section className='border-b-[#EBEBEB] border-b-[1px] mb-8'>
+    <section className=' border-b-[#EBEBEB] border-b-[1px] mb-8'>
       <div className='flex justify-between w-full'>
 
         {/* Imagenes */}
@@ -17,7 +17,6 @@ const ProductDetail = ({ detail, seller, image, imageSetter }) => {
             <img onMouseEnter={imageSetter} className='w-[44px] h-[44px] object-contain border-[1px] border-gray-400 border-solid rounded-sm py-1 cursor-pointer' key={p.id} src={p.url} alt={detail?.title} />
           ))}
           </div>
-
 
           <div className='flex items-center justify-center w-[378px] h-[478px] my-16 mx-7'>
             <img className='sticky top-[60px]' src={image} alt={detail?.title} />
@@ -41,7 +40,6 @@ const ProductDetail = ({ detail, seller, image, imageSetter }) => {
           </div>
 
         </div>
-
 
       </div>
     </section >

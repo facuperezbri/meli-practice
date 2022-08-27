@@ -50,7 +50,7 @@ const DetailContainer = () => {
   }
 
   return (
-    <div className='flex justify-between m-auto bg-white w-[1200px] rounded-sm shadow-sm mt-10 p-4'>
+    <div className='flex justify-between mx-auto bg-white w-[1200px] rounded-sm shadow-sm mt-10 p-4'>
       <div className='flex flex-col'>
         <ProductDetail detail={detail} image={image} imageSetter={imageSetter} />
         <Description description={description} />

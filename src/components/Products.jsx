@@ -26,7 +26,7 @@ const Card = ({ title, image, price, id, shipping }) => {
 
 const Products = ({ products }) => {
   return (
-    <div className='m-auto mt-8 bg-white w-fit rounded-md'>
+    <div className='mt-10 mx-auto bg-white w-fit rounded-md'>
       {
         products.results?.map((p) => (
           <Card key={p.id} image={p.thumbnail} title={p.title} price={p.price} id={p.id} shipping={p.shipping.free_shipping} />

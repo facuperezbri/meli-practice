@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { Routes, Route, useSearchParams } from 'react-router-dom'
+import Home from './pages/Home';
 import Nav from './components/Nav'
 import Products from './components/Products'
 import DetailContainer from './pages/DetailContainer';
@@ -23,6 +24,7 @@ const App = () => {
     <div className='bg-[#EBEBEB] h-full min-h-[100vh]'>
       <Nav />
       <Routes>
+        <Route path='/' element={<Home />} />
         <Route path='/items' element={<Products products={products} />} />
         <Route path='/items/:id' element={<DetailContainer />} />
       </Routes>

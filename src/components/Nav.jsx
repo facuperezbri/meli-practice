@@ -26,7 +26,7 @@ const Nav = ({ searchProducts }) => {
   }
 
   return (
-    <header className='flex flex-col items-center justify-center bg-[#FFF159]'>
+    <header className='flex flex-col items-center justify-center bg-[#FFF159] shadow-sm'>
       <nav className='flex justify-between items-center w-full p-2 gap-16 max-w-[1200px]'>
         <Link to='/'>
           <img onClick={cleanLogo} className='max-h-[34px] max-w-[134px] object-contain' src={logo} alt='MercadoLibre Logo' />
