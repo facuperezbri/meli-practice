@@ -18,6 +18,9 @@ const App = () => {
 
   useEffect(() => {
     searchProducts(product)
+    return () => {
+      setProducts()
+    }
   }, [product])
 
   return (

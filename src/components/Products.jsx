@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import loading from '../assets/loading.gif'
 
 const Card = ({ title, image, price, id, shipping }) => {
 
@@ -25,6 +26,15 @@ const Card = ({ title, image, price, id, shipping }) => {
 }
 
 const Products = ({ products }) => {
+
+  if (!products) {
+    return (
+      <div className='flex justify-center items-center w-full h-full '>
+        <img src={loading} alt='loading' />
+      </div>
+    )
+  }
+
   return (
     <div className='mt-10 mx-auto bg-white w-fit rounded-md'>
       {

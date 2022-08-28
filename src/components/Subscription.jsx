@@ -10,9 +10,9 @@ const Subscription = () => {
         <p className='text-[26px]'>
           Suscribite al nivel 6
         </p>
-        <div>
-          <p className='text-[14px] font-light line-through'>$ 1.439</p>
-          <p className='text-[24px]'>$ 499 <span className='text-[14px]'>/mes</span></p>
+        <div className='border-l-2 border-solid border-white'>
+          <p className='text-[14px] font-light line-through ml-2'>$ 1.439</p>
+          <p className='text-[24px] ml-2'>$ 499 <span className='text-[14px]'>/mes</span></p>
         </div>
       </div>
       <div className='p-[24px] w-full'>
@@ -30,13 +30,14 @@ const Subscription = () => {
           </div>
           <div className='flex items-center gap-2'>
             <img className='w-[72px] h-[72px] object-contain border-[1px] border-solid border-[#efeded] rounded-full' src={truck} alt="" />
-            <p className='w-[272px] leading-4'>Envíos gratis y rápidos desde $ 5.500 y 45% OFF en envíos de menos de $ 5.500</p>
+            <p className='w-[271.33px] leading-4'>Envíos gratis y rápidos desde $ 5.500 y 45% OFF en envíos de menos de $ 5.500</p>
           </div>
         </div>
       </div>
+      <div className='w-full h-[1px] bg-[#efeded]' />
 
-      <div className='flex justify-end items-end'>
-        <button>Suscribe</button>
+      <div className='flex justify-end items-end px-[30px] py-[16px]'>
+        <button className='bg-[#3483FA] w-[118px] h-[48px] px-[24px] rounded-md font-bold text-white text-[16px] hover:bg-[#245db3] duration-500'>Suscribite</button>
       </div>
 
     </div >

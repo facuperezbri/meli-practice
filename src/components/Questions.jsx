@@ -26,8 +26,6 @@ const Questions = ({ seller, detail }) => {
     setQuestion(e.target.value)
   }
 
-  console.log(question)
-
   return (
     <section className='flex flex-col gap-6 pl-7'>
       <h3 className='text-[24px]'>Preguntas y respuestas</h3>
@@ -45,7 +43,7 @@ const Questions = ({ seller, detail }) => {
               <img className='h-[30px]' src={question_line} alt='question' />
               <div className='flex flex-col'>
                 <p className='text-[#8D8D8D]' >{q?.answer?.text}</p>
-                <p className='text-[#8D8D8D] text-[14px]'>Respondido por {seller.nickname}</p>
+                <p className='text-[#8D8D8D] text-[14px]'>Respondido por {seller?.nickname}</p>
               </div>
 
             </div>

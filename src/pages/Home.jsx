@@ -1,4 +1,6 @@
 import React from 'react'
+import BeneficioMercadoPuntos from '../components/BeneficioMercadoPuntos'
+import FooterHome from '../components/FooterHome'
 import Carrousel from '../components/Home'
 import HomePayments from '../components/HomePayments'
 import Subscription from '../components/Subscription'
@@ -11,6 +13,8 @@ const Home = () => {
       <Carrousel />
       <HomePayments />
       <Subscription />
+      <BeneficioMercadoPuntos />
+      <FooterHome />
     </section>
   )
 }
