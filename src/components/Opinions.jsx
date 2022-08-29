@@ -10,7 +10,7 @@ function starsDisplay (review, size) {
   if (review < 0.5) {
     return (
       <div className='flex justify-between w-[200px]'>
-        <BsStar color={'#3483fa'} />
+        <BsStar size={size} color={'#3483fa'} />
         <BsStar size={size} color={'#3483fa'} />
         <BsStar size={size} color={'#3483fa'} />
         <BsStar size={size} color={'#3483fa'} />
