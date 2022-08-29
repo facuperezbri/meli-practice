@@ -27,7 +27,7 @@ const DetailContainer = () => {
     searchDetail(params.id).then(r => {
       setImage(r.pictures[0].url);
       document.title = r.title
-      axios.get(`${API_URL}/description/${params.id}`).then(r => {
+      axios.get(`${API_URL}/description/${r.id}`).then((r) => {
         setDescription(r.data)
       })
       axios.get(`${API_URL}/users/${r.seller_id}`).then((r) => {
