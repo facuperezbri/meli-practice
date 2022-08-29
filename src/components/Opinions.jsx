@@ -99,7 +99,7 @@ const Opinions = ({ detail }) => {
   const [opinions, setOpinions] = useState();
 
   useEffect(() => {
-    axios.get(`https://api.mercadolibre.com/reviews/item/${params.id}`).then((r) => {
+    axios.get(`http://localhost:3001/reviews/${params.id}`).then((r) => {
       setOpinions(r.data)
     })
   }, [params.id])

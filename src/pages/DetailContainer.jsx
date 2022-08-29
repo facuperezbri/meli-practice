@@ -26,10 +26,10 @@ const DetailContainer = () => {
     searchDetail(params.id).then(r => {
       setImage(r.pictures[0].url);
       document.title = r.title
-      axios.get(`https://api.mercadolibre.com/items/${r.id}/description`).then(r => {
+      axios.get(`http://localhost:3001/description/${params.id}`).then(r => {
         setDescription(r.data)
       })
-      axios.get(`https://api.mercadolibre.com/users/${r.seller_id}`).then((r) => {
+      axios.get(`http://localhost:3001/users/${r.seller_id}`).then((r) => {
         setSeller(r.data)
       })
     })

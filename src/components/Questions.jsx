@@ -18,7 +18,7 @@ const Questions = ({ seller, detail }) => {
   const params = useParams()
 
   useEffect(() => {
-    axios.get(`https://api.mercadolibre.com/questions/search?item=${params.id}`).then((r) => {
+    axios.get(`http://localhost:3001/questions/${params.id}`).then((r) => {
       setQuestionsAPI(r.data)
     })
   }, [params.id])
