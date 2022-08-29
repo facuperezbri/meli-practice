@@ -8,6 +8,7 @@ import loading from '../assets/loading.gif'
 import SellerInfo from '../components/SellerInfo'
 import Footer from '../components/Footer'
 import Opinions from '../components/Opinions'
+import { API_URL } from '../services/API'
 
 const DetailContainer = () => {
   const params = useParams()
@@ -17,7 +18,7 @@ const DetailContainer = () => {
   const [image, setImage] = useState()
 
   async function searchDetail (id) {
-    let data = await axios.get(`http://localhost:3001/items/${id}`)
+    let data = await axios.get(`${API_URL}/items/${id}`)
     setDetail(data.data)
     return data.data
   }
@@ -26,10 +27,10 @@ const DetailContainer = () => {
     searchDetail(params.id).then(r => {
       setImage(r.pictures[0].url);
       document.title = r.title
-      axios.get(`http://localhost:3001/description/${params.id}`).then(r => {
+      axios.get(`${API_URL}/description/${params.id}`).then(r => {
         setDescription(r.data)
       })
-      axios.get(`http://localhost:3001/users/${r.seller_id}`).then((r) => {
+      axios.get(`${API_URL}/users/${r.seller_id}`).then((r) => {
         setSeller(r.data)
       })
     })

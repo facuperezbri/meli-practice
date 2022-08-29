@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Nav from './components/Nav'
 import Products from './components/Products'
 import DetailContainer from './pages/DetailContainer';
+import { API_URL } from './services/API';
 
 const App = () => {
   const [params] = useSearchParams()
@@ -12,7 +13,7 @@ const App = () => {
   const [products, setProducts] = useState([]);
 
   async function searchProducts (product) {
-    let data = await axios.get(`http://localhost:3001/items/?name=${product}`)
+    let data = await axios.get(`${API_URL}/items/?name=${product}`)
     setProducts(data.data)
   }
 

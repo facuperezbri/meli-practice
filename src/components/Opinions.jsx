@@ -5,6 +5,7 @@ import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { BsStarFill, BsStar } from 'react-icons/bs'
 import { HiOutlineThumbUp, HiOutlineThumbDown } from 'react-icons/hi'
+import { API_URL } from '../services/API'
 
 function starsDisplay (review, size) {
   if (review < 0.5) {
@@ -99,7 +100,7 @@ const Opinions = ({ detail }) => {
   const [opinions, setOpinions] = useState();
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/reviews/${params.id}`).then((r) => {
+    axios.get(`${API_URL}/reviews/${params.id}`).then((r) => {
       setOpinions(r.data)
     })
   }, [params.id])

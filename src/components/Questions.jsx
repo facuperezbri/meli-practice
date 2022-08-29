@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import question_line from '../assets/question-line.png'
 import { BsSearch } from 'react-icons/bs'
+import { API_URL } from '../services/API'
 
 const Questions = ({ seller, detail }) => {
   const [questionsAPI, setQuestionsAPI] = useState()
@@ -18,7 +19,7 @@ const Questions = ({ seller, detail }) => {
   const params = useParams()
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/questions/${params.id}`).then((r) => {
+    axios.get(`${API_URL}/questions/${params.id}`).then((r) => {
       setQuestionsAPI(r.data)
     })
   }, [params.id])
