@@ -28,7 +28,7 @@ body {
 }
 
 a:hover {
-  color: #1259C3;
+  color: inherit;
 }
 
 #violet {

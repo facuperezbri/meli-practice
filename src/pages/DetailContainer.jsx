@@ -6,6 +6,8 @@ import Questions from '../components/Questions'
 import Description from '../components/Description'
 import loading from '../assets/loading.gif'
 import SellerInfo from '../components/SellerInfo'
+import Footer from '../components/Footer'
+import Opinions from '../components/Opinions'
 
 const DetailContainer = () => {
   const params = useParams()
@@ -50,14 +52,18 @@ const DetailContainer = () => {
   }
 
   return (
-    <div className='flex justify-between mx-auto bg-white w-[1200px] rounded-sm shadow-sm mt-10 p-4'>
-      <div className='flex flex-col'>
-        <ProductDetail detail={detail} image={image} imageSetter={imageSetter} />
-        <Description description={description} />
-        <Questions seller={seller} detail={detail} />
+    <>
+      <div className='flex justify-between mx-auto bg-white w-[1200px] rounded-sm shadow-sm my-10 p-4'>
+        <div className='flex flex-col'>
+          <ProductDetail detail={detail} image={image} imageSetter={imageSetter} />
+          <Description description={description} />
+          <Questions seller={seller} detail={detail} />
+          <Opinions detail={detail} />
+        </div>
+        <SellerInfo seller={seller} detail={detail} />
       </div>
-      <SellerInfo seller={seller} detail={detail} />
-    </div>
+      <Footer />
+    </>
   )
 }
 

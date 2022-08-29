@@ -7,6 +7,7 @@ import image5 from '../assets/carrousel-images/5.webp'
 import image6 from '../assets/carrousel-images/6.webp'
 
 const Carrousel = () => {
+
   return (
     <div id="carouselExampleControls" className="flex justify-center items-center carousel slide w-[84%]" data-bs-ride="carousel" data-interval="1000">
       <div className="carousel-inner w-[1600px]">
